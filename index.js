@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { Triangle, Circle, Square } = require('./shapes');
+const { Triangle, Circle, Square } = require('./lib/shapes');
 
 const SHAPES = ["triangle", "circle", "square"];
 
@@ -32,24 +32,29 @@ const questions = [
 inquirer.prompt(questions).then((answers) => {
   const { text, textColor, shape, shapeColor } = answers;
   let shapeObj;
+  let svgParams;
+
 
   switch (shape) {
     case "triangle":
       shapeObj = new Triangle();
+      svgParams = `x="50%" y="80%" font-size="70"` 
       break;
     case "circle":
       shapeObj = new Circle();
+      svgParams = `x="50%" y="64%" font-size="80"`
       break;
     case "square":
       shapeObj = new Square();
+      svgParams = `x="50.5%" y="60%" font-size="60"`
       break;
   }
 
   shapeObj.setColor(shapeColor);
 
-  const svg = `<svg width="300" height="200">
+  let svg = `<svg width="300" height="200">
       ${shapeObj.render()}
-      <text x="50%" y="50%" text-anchor="middle" fill="${textColor}">${text}</text>
+      <text ${svgParams} text-anchor="middle" fill="${textColor}">${text.toUpperCase()}</text>
     </svg>`;
 
   fs.writeFile("./output/logo.svg", svg, (err) => {
