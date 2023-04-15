@@ -10,7 +10,7 @@ To install this application, clone the repository and run npm install to install
 
 To use this application, navigate to the root directory of the cloned repository and run "node index.js" in your terminal. Follow the prompts to answer questions about your logo, and the README will be generated in the output/ directory.
 
-Here's a video showing how to use the application: [![Application Demo](https://www.awesomescreenshot.com/video/16550476?key=5bcb54e77209d8fd14edaf7ce536d69f)
+Here's a video showing how to use the application: [Application Demo](https://www.awesomescreenshot.com/video/16550476?key=5bcb54e77209d8fd14edaf7ce536d69f)
 
 ## Test
 
