@@ -1,9 +1,11 @@
+// Imports
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { Triangle, Circle, Square } = require('./lib/shapes');
 
 const SHAPES = ["triangle", "circle", "square"];
 
+// Inquirer prompt questions
 const questions = [
   {
     type: "list",
@@ -29,6 +31,7 @@ const questions = [
   },
 ];
 
+// SVG generation
 inquirer.prompt(questions).then((answers) => {
   const { text, textColor, shape, shapeColor } = answers;
   let shapeObj;
