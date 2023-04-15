@@ -20,7 +20,7 @@ const questions = [
   {
     type: "input",
     name: "textColor",
-    message: "Type a color keyword (OR a hexadecimal number) for the text:",
+    message: "Type a color keyword (OR a hexadecimal number) for the three characters:",
   },
   {
     type: "input",
