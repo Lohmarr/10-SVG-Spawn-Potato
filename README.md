@@ -4,7 +4,7 @@ This is a command-line tool for generating SVG logos based on user input. It use
 
 ## Installation
 
-To install this application, clone the repository and run npm install to install the necessary dependencies.
+To install this application, clone the repository and run "npm install" to install the necessary dependencies.
 
 ## Usage
 
